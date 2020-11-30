@@ -1,7 +1,7 @@
 body{
 
     font-style: italic;
-    background-color: rgb(146, 174, 209);
+    background-color: rgb(214, 213, 209);
 }
 
 
@@ -50,7 +50,7 @@ body{
   
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color:  rgb(90, 106, 126);
+    background-color:  rgb(167, 167, 167);
     color: white;
     font-size: 20px;
     
