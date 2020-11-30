@@ -1,0 +1,20 @@
+
+.body{
+    font-style: italic;
+}
+.nim{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+.presentation{
+
+    text-align: center;
+    border: solid black 0.5rem;
+    padding: 3rem;
+    justify-content: center;
+    margin: 0 30rem;
+    border-radius: 10rem;
+
+}
