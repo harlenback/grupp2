@@ -79,3 +79,17 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.headingBig{
+  /*ändrar stilen på texten*/
+  font-style: italic;
+  /*gör så att texten hamnar i mitten*/
+  text-align: center;
+   /*ändrar storleken på texten*/
+  font-size: 50px;
+  /*ändrar färg på texten*/
+  color: rgb(0, 0, 0);
+  margin: 2rem 0;
+  
+  
+                    
+}
