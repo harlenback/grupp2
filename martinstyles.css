@@ -1,112 +1,173 @@
-/* Generell styling */
-
-*{
-    margin: 0;
-    padding: 0;
-  }
-
-
-  :root{
-      background-image: url("img/surface-455124_1920.jpg");
-      background-color: #cccccc; /* Om bakgrundsbilden inte fungerar */
-      height: 500px; /* You must set a specified height */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover; /* Resize the background image to cover the entire container */
-      }
-
-
-p{
-
+body{
+  background-color: rgb(240, 238, 234);
 }
 
-/* header startar här */
-
-header{
-    text-align: center;
+.content-border{
+  border: black solid 5px;
+  border-radius: 20px;
+  width: 50%;
+  height: auto;
+  margin: 20px auto 0px auto;
+  text-align: center;
+  padding: 25px;
 }
 
-.dropbtn {
-    background-color: red;
-    color: white;
-    padding: 1em;
-    font-size: 1em;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .dropdown-content {
-    display: none;
-    /* position: absolute; */
-    right: 0;
-    background-color: red;
-    min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+.port{
+  margin-left: 15%;
+}
 
-  .dropbtn {
-      width: 100%;
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.884);
+  font-family: Arial;
+  margin: 0 auto;
+  border-radius: 50px;
+}
 
-  }
-  
-  .dropdown-content li{
-    list-style-type: none
-  }
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .dropdown-content li a {
-    color: black;
-    padding: 0.75em 1em;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
 
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0.884);
+  color: rgb(255, 255, 255);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color:rgba(0, 0, 0, 0.884);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:   rgba(0, 0, 0, 0.884);
+  color:white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.headingBig{
+  /*ändrar stilen på texten*/
+  font-style: italic;
+  /*gör så att texten hamnar i mitten*/
+  text-align: center;
+   /*ändrar storleken på texten*/
+  font-size: 50px;
+  /*ändrar färg på texten*/
+  color: rgb(255, 255, 255);
+  margin: 2rem 0;               
+}
+
+.headingBig{
+  /*ändrar stilen på texten*/
+  font-style: italic;
+  /*gör så att texten hamnar i mitten*/
+  text-align: center;
+   /*ändrar storleken på texten*/
+  font-size: 50px;
+  /*ändrar färg på texten*/
+  color: rgb(0, 0, 0);
+  margin: 2rem 0;               
+}
 
 
 /* Media querys */
-
-@media all and (min-width: 480px) {
-
-.dropbtn {
-display: none;
-}
-
-.dropdown{
-    padding: 0 auto;
-}
-
+@media all and (min-width: 700px){
+/* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: flex;
-    justify-content: flex-start;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(114, 114, 114);
+  z-index: 1;
+  font-style: italic;
+}}
+
+@media all and (max-width: 700px) {
+
+  /* Navbar container */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.884);
+  font-family: Arial;
+  border-radius: 50px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: flex;
-    justify-content: flex-start;
+/* Links inside the navbar */
+.navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-nav{
-    background-color: red;
+/* The dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-li {
-    float: left;
-  }
-
-li a {
-display: block;
-font-size: 2em;
+/* Dropdown button */
+.dropdown .dropbtn {
+  display: none;
 }
 
+
+/* Links inside the dropdown */
+.dropdown-content a {
+display: flex;
+justify-content: center;
+}
+                    
+.headingBig{
+  font-style: italic;
+  text-align: center;
+   /*ändrar storleken på texten*/
+  font-size: 25px;
+  /*ändrar färg på texten*/
+  color: rgb(0, 0, 0);
+  margin: 2rem 0;
+    
+}
+
+.startsida{
+  background-color: blue;
 }
