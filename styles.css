@@ -7,7 +7,6 @@
 
 
   :root{
-      background-image: url("img/surface-455124_1920.jpg");
       background-color: #cccccc;
       height: 500px;
       background-position: center;
@@ -52,7 +51,6 @@ header{
 
   .dropbtn {
       width: 100%;
-
   }
   
   .dropdown-content li{
