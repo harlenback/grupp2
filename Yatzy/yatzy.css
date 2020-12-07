@@ -26,3 +26,8 @@
   .greyRow, .greyColumn {
     background-color: darkgray;
   }
+  input[type="number"]
+{
+    background: transparent;
+    border: none;
+}
