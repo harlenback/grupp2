@@ -12,4 +12,7 @@ function calcSum() {
     if (sum >= 63) {
       document.getElementById("playerone_bonus").innerHTML = 50;
     }
+    else if (sum < 63){
+      document.getElementById("playerone_bonus").innerHTML = 0;
+    }
 }
