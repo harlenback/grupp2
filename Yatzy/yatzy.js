@@ -9,7 +9,7 @@ function calcSum() {
     let sum = Number(playerone1.value) + Number(playerone2.value) + Number(playerone3.value) + Number(playerone4.value) + Number(playerone5.value) + Number(playerone6.value);
 
     document.getElementById("playerone_sum").innerHTML = sum;
-    if (sum > 63) {
+    if (sum >= 63) {
       document.getElementById("playerone_bonus").innerHTML = 50;
     }
 }
