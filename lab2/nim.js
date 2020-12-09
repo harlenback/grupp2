@@ -30,6 +30,7 @@ let Player2 = new Player;
 
 
 
+
 function Scoreupdate(){
     let P1_points = document.getElementById("player1_points");
     P1_points.innerHTML = Player1.points.join(" ");
@@ -38,5 +39,20 @@ function Scoreupdate(){
 }
 Scoreupdate()
 
+
+document.addEventListener("DOMContentLoaded", function()
+{
+    let button = document.getElementById("btnSave");
+    let textbox = document.getElementById("name");
+
+    button.addEventListener("click", function(){
+        let Player1_name = textbox.value;
+
+        console.log(Player1_name)
+
+    })
+
+
+})
 
 
