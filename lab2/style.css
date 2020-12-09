@@ -1,0 +1,10 @@
+.player_info{
+    border: black solid 5px;
+    border-radius: 20px;
+    width: 50%;
+    height: auto;
+    margin: 20px auto 0px auto;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
