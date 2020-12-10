@@ -6,6 +6,7 @@ class Game {
     StartGame(){
         Player1.turn = true;
         this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I"];
+        victorychecker()
         Scoreupdate()
         turnsUpdate()
     }
@@ -100,11 +101,18 @@ function turnsUpdate(){
 }
 
 function victorychecker(){
-    if(this.turn === true){
-
+    let i = 0;
+    for(point of Game1.points){
+        i++
+    }
+    document.getElementById("sticks_left").innerHTML = i;
+    if(i === 0 && Player1.turn === true){
+        alert("Spelare 1 vann!")
+    }
+    else if(i === 0 && Player2.turn === true){
+        alert("Spelare 2 vann!")
     }
 }
-
 
 
 
