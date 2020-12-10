@@ -9,17 +9,14 @@
 <body>
 
     <div class="player_info">  
-        <br>
-        <label for="name1">Namn spelare 1:</label>
-        <input type="text" id="name1" placeholder="Skriv namnet här">
-        <button type="submit" onclick="game.player1.setName()">Bekräfta spelare 1 namn</button>
+        <input type="text" id="name1" value="Spelare 1" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player1.setName()">Byt namn spelare 1</button>
         <br>
            
         <br>
-        <label for="name2">Namn spelare 2:</label>
-        <input type="text" id="name2" placeholder="Skriv namnet här">
-        <button type="submit" onclick="game.player2.setName()">Bekräfta spelare 2 namn</button>
-        <br><br><br>
+        <input type="text" id="name2" value="Spelare 2" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player2.setName()">Byt namn spelare 2</button>
+        <br>
     </div>
 
     <div class="player_info">
@@ -29,7 +26,11 @@
         </div>
         <br>
 
-         <h3>Tändstickor: <span id="stick"></span></h3>
+        <div class="pinnarkvar">
+         <h3><span id="stick"></span></h3>
+         Antal tändstickor kvar:
+         <span id="pinnepoints">21</span>
+        </div>
 
         <br>
 
@@ -38,12 +39,12 @@
         </div>
 
         <div>
+            <br>
         <button id="take1Button" type="button" onclick="sticks.removeSticks(1)">Ta 1 tändsticka</button>
         <button id="take2Button" type="button" onclick="sticks.removeSticks(2)">Ta 2 tändstickor</button>
         <button id="take3Button" type="button" onclick="sticks.removeSticks(3)">Ta 3 tändstickor</button>    
         </div>
 
-        <br>
     </div>
     <script src="nim.js"></script>
     
