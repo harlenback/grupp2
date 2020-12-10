@@ -1,7 +1,13 @@
 
 class Game {
-    constructor(points,){
-        this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I",];
+    constructor(points){
+        this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I"];
+    }
+    StartGame(){
+        Player1.turn = true;
+        this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I"];
+        Scoreupdate()
+        turnsUpdate()
     }
     PlayerTakeAway1(){
         this.points.splice(0,1)
@@ -21,11 +27,12 @@ class Game {
 
 
 class Player{
-    constructor(name,points,turn){
+    constructor(name,turn){
         this.name;
         this.turn;
     }
    
+
 
 }
 
@@ -36,6 +43,16 @@ let Player2 = new Player;
 
 
 
+function turnswitcherP1(){
+    Player2.turn = true;
+    Player1.turn = false;
+    turnsUpdate()
+}
+function turnswitcherP2(){
+    Player1.turn = true;
+    Player2.turn = false;
+    turnsUpdate()
+}
 
 
 
@@ -43,7 +60,6 @@ function Scoreupdate(){
     let P_points = document.getElementById("player_points");
     P_points.innerHTML = Game1.points.join(" ");
 }
-Scoreupdate()
 
 
 function setPlayerName(){        
@@ -57,6 +73,38 @@ function setPlayerName(){
     Player2.name = player2Name.value;
 }   
 
-console.log(player1Name)
+
+
+function turnsUpdate(){
+
+    if(Player1.turn === true){
+     document.getElementById("player2_button1",).disabled = true;
+     document.getElementById("player2_button2",).disabled = true;
+     document.getElementById("player2_button3",).disabled = true;
+     document.getElementById("player1_button1",).disabled = false;
+     document.getElementById("player1_button2",).disabled = false;
+     document.getElementById("player1_button3",).disabled = false;
+
+    }
+    else if(Player2.turn === true){
+        document.getElementById("player1_button1",).disabled = true;
+        document.getElementById("player1_button2",).disabled = true;
+        document.getElementById("player1_button3",).disabled = true;
+        document.getElementById("player2_button1",).disabled = false;
+        document.getElementById("player2_button2",).disabled = false;
+        document.getElementById("player2_button3",).disabled = false;
+    }
+
+
+    
+}
+
+function victorychecker(){
+    if(this.turn === true){
+
+    }
+}
+
+
 
 
