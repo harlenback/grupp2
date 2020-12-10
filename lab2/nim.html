@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nim Lab2</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="player_info">  
+        <br>
+        <label for="name1">Namn spelare 1:</label>
+        <input type="text" id="name1" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player1.setName()">Bekräfta spelare 1 namn</button>
+        <br>
+           
+        <br>
+        <label for="name2">Namn spelare 2:</label>
+        <input type="text" id="name2" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player2.setName()">Bekräfta spelare 2 namn</button>
+        <br><br><br>
+    </div>
+
+    <div class="player_info">
+
+        <div>
+            <h1 id="player1Name">Spelare 1</h1>        
+        </div>
+        <br>
+
+         <h3>Tändstickor: <span id="stick"></span></h3>
+
+        <br>
+
+        <div>
+            <h1 id="player2Name">Spelare 2</h1>        
+        </div>
+
+        <div>
+        <button id="take1Button" type="button" onclick="sticks.removeSticks(1)">Ta 1 tändsticka</button>
+        <button id="take2Button" type="button" onclick="sticks.removeSticks(2)">Ta 2 tändstickor</button>
+        <button id="take3Button" type="button" onclick="sticks.removeSticks(3)">Ta 3 tändstickor</button>    
+        </div>
+
+        <br>
+    </div>
+    <script src="nim.js"></script>
+    
+</body>
+</html>
