@@ -1,9 +1,7 @@
 
-class Player{
-    constructor(name,points,turn){
-        this.name;
+class Game {
+    constructor(points,){
         this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I",];
-        this.turn;
     }
     PlayerTakeAway1(){
         this.points.splice(0,1)
@@ -18,11 +16,21 @@ class Player{
         this.points.splice(0,3)
          Scoreupdate()
     }
-
 }
 
 
 
+class Player{
+    constructor(name,points,turn){
+        this.name;
+        this.turn;
+    }
+   
+
+}
+
+
+let Game1 = new Game;
 let Player1 = new Player;
 let Player2 = new Player;
 
@@ -32,27 +40,23 @@ let Player2 = new Player;
 
 
 function Scoreupdate(){
-    let P1_points = document.getElementById("player1_points");
-    P1_points.innerHTML = Player1.points.join(" ");
-    let P2_points = document.getElementById("player2_points");
-    P2_points.innerHTML = Player2.points.join(" ");
+    let P_points = document.getElementById("player_points");
+    P_points.innerHTML = Game1.points.join(" ");
 }
 Scoreupdate()
 
 
-document.addEventListener("DOMContentLoaded", function()
-{
-    let button = document.getElementById("btnSave");
-    let textbox = document.getElementById("name");
+function setPlayerName(){        
+    let player1Name = document.getElementById('player1_name');
+    let player2Name = document.getElementById('player2_name');
+  
+    document.getElementById('player1_nameLabel').innerHTML = player1Name.value;
+    document.getElementById('player2_nameLabel').innerHTML = player2Name.value;
 
-    button.addEventListener("click", function(){
-        let Player1_name = textbox.value;
+    Player1.name = player1Name.value;
+    Player2.name = player2Name.value;
+}   
 
-        console.log(Player1_name)
-
-    })
-
-
-})
+console.log(player1Name)
 
 
