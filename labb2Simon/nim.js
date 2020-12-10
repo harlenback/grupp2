@@ -107,10 +107,10 @@ function victorychecker(){
     }
     document.getElementById("sticks_left").innerHTML = i;
     if(i === 0 && Player1.turn === true){
-        alert("Spelare 1 vann!")
+        alert( Player1.name + " vann!")
     }
     else if(i === 0 && Player2.turn === true){
-        alert("Spelare 2 vann!")
+        alert(Player2.name + " vann!")
     }
 }
 
