@@ -7,43 +7,45 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="player_info">  <label for="player1_name">Namn Spelare 1</label>
-        <input type="text" id="player1_name" value="">  
-        <br><br>
-        <label for="player2Name">Namn Spelare 2</label>
-        <input type="text" id="player2_name" value="">
-        
-        <br><br>
-        <button type="button" id="ButtonClick" onclick="setPlayerName()">Bekräfta spelares namn</button>
-    
+
+    <div class="player_info">  
+        <br>
+        <label for="name1">Namn spelare 1:</label>
+        <input type="text" id="name1" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player1.setName()">Bekräfta spelare 1 namn</button>
+        <br>
+           
+        <br>
+        <label for="name2">Namn spelare 2:</label>
+        <input type="text" id="name2" placeholder="Skriv namnet här">
+        <button type="submit" onclick="game.player2.setName()">Bekräfta spelare 2 namn</button>
+        <br><br><br>
     </div>
 
     <div class="player_info">
-    <div>
-        <h1 id="player1_nameLabel">Player 1</h1>
-        
+
+        <div>
+            <h1 id="player1Name">Spelare 1</h1>        
+        </div>
+        <br>
+
+         <h3>Tändstickor: <span id="stick"></span></h3>
+
+        <br>
+
+        <div>
+            <h1 id="player2Name">Spelare 2</h1>        
+        </div>
+
+        <div>
+        <button id="take1Button" type="button" onclick="sticks.removeSticks(1)">Ta 1 tändsticka</button>
+        <button id="take2Button" type="button" onclick="sticks.removeSticks(2)">Ta 2 tändstickor</button>
+        <button id="take3Button" type="button" onclick="sticks.removeSticks(3)">Ta 3 tändstickor</button>    
+        </div>
+
+        <br>
     </div>
-    <div>
-        <button onclick="Game1.PlayerTakeAway1()">Tag 1 tändsticka</button>
-        <button onclick="Game1.PlayerTakeAway2()">Tag 2 tändstickor</button>
-        <button onclick="Game1.PlayerTakeAway3()">Tag 3 tändstickor</button>
-    </div>
-    <br>
-    <h3 id="player_points"></h3>
-    <br>
-    <div>
-        <h1 id="player2_nameLabel">Player 2</h1>
-        
-    </div>
-    <div>
-        <button onclick="Game1.PlayerTakeAway1()">Tag 1 tändsticka</button>
-        <button onclick="Game1.PlayerTakeAway2()">Tag 2 tändstickor</button>
-        <button onclick="Game1.PlayerTakeAway3()">Tag 3 tändstickor</button>
-    </div>
-    <br>
-</div>
     <script src="nim.js"></script>
     
 </body>
 </html>
-

@@ -1,62 +1,47 @@
-
 class Game {
-    constructor(points,){
+    constructor(){
+    this.player1 = new Player("Spelare 1", 1);
+    this.player2 = new Player("Spelare 2", 2);
+    }
+}
+
+
+class Player {
+	constructor(name, id) {
+		this.name = name;
+		this.id = id;
+    }
+    
+	setName() {	
+		this.name = document.getElementById(`name${this.id}`).value;
+		document.getElementById(`player${this.id}Name`).innerHTML = this.name;
+	}
+}
+
+
+class Stick {
+	constructor(points) {
         this.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I",];
-    }
-    PlayerTakeAway1(){
-        this.points.splice(0,1)
-        Scoreupdate()
-        
-    }
-    PlayerTakeAway2(){
-        this.points.splice(0,2)
-        Scoreupdate()
-    }
-   PlayerTakeAway3(){
-        this.points.splice(0,3)
-         Scoreupdate()
-    }
+	}
+
+	removeSticks(num) {
+		this.points.splice(0, num);
+		document.getElementById('stick').innerHTML = sticks.points.join(" ");;
+	}
+
+	setAmountOfSticks() {
+		document.getElementById('stick').innerHTML = sticks.points.join(" ");;
+	}
 }
 
 
-
-class Player{
-    constructor(name,points,turn){
-        this.name;
-        this.turn;
-    }
-   
-
-}
-
-
-let Game1 = new Game;
-let Player1 = new Player;
-let Player2 = new Player;
-
-
-
-
+let game = new Game;
+let sticks = new Stick
+sticks.setAmountOfSticks();
 
 
 function Scoreupdate(){
-    let P_points = document.getElementById("player_points");
-    P_points.innerHTML = Game1.points.join(" ");
+    let P_points = document.getElementById("stick");
+    P_points.innerHTML = sticks.points.join(" ");
 }
 Scoreupdate()
-
-
-function setPlayerName(){        
-    let player1Name = document.getElementById('player1_name');
-    let player2Name = document.getElementById('player2_name');
-  
-    document.getElementById('player1_nameLabel').innerHTML = player1Name.value;
-    document.getElementById('player2_nameLabel').innerHTML = player2Name.value;
-
-    Player1.name = player1Name.value;
-    Player2.name = player2Name.value;
-}   
-
-console.log(player1Name)
-
-
