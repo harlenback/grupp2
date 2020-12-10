@@ -3,29 +3,23 @@ class Game {
         this.points = points;
     }
 
-        PlayerTake1() {
-            this.points -=1;
+        PlayerTake(number) {
+            this.points -=number;
             Scoreupdate()        
         }
-    
-        PlayerTake2(){
-            this.points -=2;
-            Scoreupdate()
-        }
-        
-        PlayerTake3(){
-            this.points -=3;
-             Scoreupdate()
-        }
+
 }
 
 let Game1 = new Game();
 
 class Player{
-    constructor(name, playerID, turn){
+    constructor(name, playerID){
         this.name = name;
         this.playerID = playerID;
-        this.turn = turn;
+    }
+
+    createPlayers() {
+
     }
 }
 
