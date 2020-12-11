@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nim Lab2</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="player_info">  <label for="player1_name">Namn Spelare 1</label>
+        <input type="text" id="player1_name" value="Player 1">  
+        <br><br>
+        <label for="player2Name">Namn Spelare 2</label>
+        <input type="text" id="player2_name" value="Player 2">
+        
+        <br><br>
+        <button type="button" id="ButtonClick" onclick="setPlayerName()">Bekräfta spelares namn</button>
+    
+    </div>
+
+    <div class="player_info">
+    <div>
+        <h1 id="player1_nameLabel">Player 1</h1>
+        
+    </div>
+    <div>
+        <button id="player1_button1"onclick="Game1.PlayerTakeAway1(), turnswitcherP1(), victorychecker()">Tag 1 tändsticka</button>
+        <button id="player1_button2"onclick="Game1.PlayerTakeAway2(), turnswitcherP1(), victorychecker()">Tag 2 tändstickor</button>
+        <button id="player1_button3"onclick="Game1.PlayerTakeAway3(), turnswitcherP1(), victorychecker()">Tag 3 tändstickor</button>
+    </div>
+    <br>
+    <h3 id="player_points"></h3>
+    <h3>Antal stickor kvar:</h3>
+    <h3 id="sticks_left"></h3>
+    <div>
+        <h1 id="player2_nameLabel">Player 2</h1>
+        
+    </div>
+    <div>
+        <button id="player2_button1" onclick="Game1.PlayerTakeAway1(),turnswitcherP2(), victorychecker()" >Tag 1 tändsticka</button>
+        <button id="player2_button2" onclick="Game1.PlayerTakeAway2(),turnswitcherP2(), victorychecker()" >Tag 2 tändstickor</button>
+        <button id="player2_button3" onclick="Game1.PlayerTakeAway3(),turnswitcherP2(), victorychecker()" >Tag 3 tändstickor</button>
+    </div>
+    <br>
+</div>
+<button onclick="Game1.StartGame()">Start / Restart Game</button>
+    <script src="nim.js"></script>
+    
+</body>
+</html>
+
