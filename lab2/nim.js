@@ -43,12 +43,12 @@ Scoreupdate()
 document.addEventListener("DOMContentLoaded", function()
 {
     let button = document.getElementById("btnSave");
-    let textbox = document.getElementById("name");
+    let textbox = document.getElementById("Player1_name");
 
     button.addEventListener("click", function(){
         let Player1_name = textbox.value;
 
-        console.log(Player1_name)
+        Player1_name = document.getElementById("test")
 
     })
 
