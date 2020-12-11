@@ -35,6 +35,7 @@ table {
     margin: 4% auto;
     width: 50%;
     border-collapse: collapse;
+    border: black solid 5px;
 }
   
   th {
