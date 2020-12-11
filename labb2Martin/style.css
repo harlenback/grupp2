@@ -1,3 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.part1 {
+  display: flex;
+}
+
+table, .player_input{
+  margin: 4% auto;
+  width: 30%;
+  padding: 2%;
+  border-collapse: collapse;
+  border: black solid 5px;
+  border-radius: 50px;
+}
+
 .player_info{
     border: black solid 5px;
     border-radius: 20px;
@@ -18,11 +36,6 @@
     padding: 2% 2% 4%;
   }
 
-h1{
-    margin: 2%;
-    padding: 0;
-}
-
 .pinnarkvar {
     background-color: lightcoral;
     border-radius: 50px;
@@ -31,13 +44,6 @@ h1{
     padding: 1px 0 20px;
 }
 
-table {
-    margin: 4% auto;
-    width: 50%;
-    border-collapse: collapse;
-    border: black solid 5px;
-}
-  
   th {
     text-align: left;
     padding: 2%;

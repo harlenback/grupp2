@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <div class="player_info">  
+<div class="part1">
+
+    <div class="player_input">  
         <input type="text" id="name1" value="Spelare 1" placeholder="Skriv namnet här">
         <button type="submit" onclick="game.player1.setName()">Byt namn spelare 1</button>
         <br>
@@ -18,6 +20,23 @@
         <button type="submit" onclick="game.player2.setName()">Byt namn spelare 2</button>
         <br>
     </div>
+
+
+        <table id="highscoreTable"> 
+            <tr>
+                <th>Spelare</th>
+                <td id="name1HighscoreName">Spelare 1</td>
+                <td id="name2HighscoreName">Spelare 2</td>
+            </tr>
+            
+            <tr>
+                <th>Poäng</th>
+                <td id="name2HighscorePoints">0</td>
+                <td id="name1HighscorePoints">0</td>
+            </tr> 
+        </table>
+
+</div>
 
     <div class="player_info">
 
@@ -49,19 +68,6 @@
     </div>
 
     
-<table id="highscoreTable"> 
-    <tr>
-        <th>Spelare</th>
-        <td id="name1HighscoreName">Spelare 1</td>
-        <td id="name2HighscoreName">Spelare 2</td>
-    </tr>
-    
-    <tr>
-        <th>Poäng</th>
-        <td id="name2HighscorePoints">0</td>
-        <td id="name1HighscorePoints">0</td>
-    </tr> 
-</table>
 
 
     <script src="nim.js"></script>    
