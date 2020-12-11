@@ -23,20 +23,43 @@ class Game {
 		if (sticks.points <= 0) {
 			alert(`${this.playerBefore.innerHTML} vinner spelet!`);
 			document.getElementById('stick').innerHTML = 0;
+			document.getElementById('pinnepoints').innerHTML = 0;
+
+			// highscore
+			game.listOfPlayers[game.activeId].points += 2;
+			console.log(game.listOfPlayers[game.activeId].points);
+			document.getElementById(`name${this.playerActiveId}HighscorePoints`).innerHTML = game.listOfPlayers[game.activeId].points;
+			document.getElementById(`name${this.playerActiveId}HighscoreName`).innerHTML = game.listOfPlayers[game.activeId].name;
+
 		}
+	}
+	StartGame(){
+		sticks.points = ["I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I",];
+		console.log(sticks.points);
+		document.getElementById("take1Button").disabled = false
+		document.getElementById("take2Button").disabled = false
+		document.getElementById("take3Button").disabled = false
+
+		document.getElementById(`name1HighscoreName`).innerHTML = game.listOfPlayers[0].name;
+		document.getElementById(`name2HighscoreName`).innerHTML = game.listOfPlayers[1].name;
+
+		sticks.setAmountOfSticks()
 	}
 }
 
 
 class Player {
-	constructor(name, id) {
+	constructor(name, id, points = 0) {
 		this.name = name;
 		this.id = id;
+		this.points = points;
     }
     
 	setName() {	
 		this.name = document.getElementById(`name${this.id}`).value;
 		document.getElementById(`player${this.id}Name`).innerHTML = this.name;
+		document.getElementById(`name1HighscoreName`).innerHTML = game.listOfPlayers[0].name;
+		document.getElementById(`name2HighscoreName`).innerHTML = game.listOfPlayers[1].name;
 	}
 }
 
@@ -63,6 +86,7 @@ class Stick {
 
 	setAmountOfSticks() {
 		document.getElementById('stick').innerHTML = sticks.points.join(" ");
+		document.getElementById('pinnepoints').innerHTML = this.points.length;
 	}
 }
 
